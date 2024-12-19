@@ -24,7 +24,7 @@
 !ProjectJMJ/Content/DataAsset/**/*.uasset
 !ProjectJMJ/Content/AI/**/*.uasset
 !ProjectJMJ/Content/UI/**/*.uasset
-
+!说明.txt
 # Allow any files from /RawContent dir.
 # Any file in /RawContent dir will be managed by git lfs.
 !/RawContent/**/*
