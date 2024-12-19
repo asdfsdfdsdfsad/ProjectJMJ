@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-GameFeatureTestRuntime.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"G:\Work\UE5\Object\UE5C++Object\RPG\ProjectJMJ\ProjectJMJ\Intermediate\Build\Win64\x64\ProjectJMJEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"G:\Work\UE5\Object\UE5C++Object\RPG\ProjectJMJ\ProjectJMJ\Plugins\GameFeatures\GameFeatureTest\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameFeatureTestRuntime\Module.GameFeatureTestRuntime.cpp.obj"
+"G:\Work\UE5\Object\UE5C++Object\RPG\ProjectJMJ\ProjectJMJ\Plugins\GameFeatures\GameFeatureTest\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameFeatureTestRuntime\Default.rc2.res"
+/OUT:"G:\Work\UE5\Object\UE5C++Object\RPG\ProjectJMJ\ProjectJMJ\Plugins\GameFeatures\GameFeatureTest\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameFeatureTestRuntime\UnrealEditor-GameFeatureTestRuntime.lib"
