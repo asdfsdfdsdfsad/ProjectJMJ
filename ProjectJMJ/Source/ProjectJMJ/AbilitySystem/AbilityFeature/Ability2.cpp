@@ -8,7 +8,7 @@ void UAbility2::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const F
 {
 	if (AbilityDataAsset && AbilityDataAsset->Action && ActorInfo->OwnerActor->GetWorld()) {
 		FTransform Transform;
-		FVector v = ActorInfo->OwnerActor->GetActorLocation() + (ActorInfo->OwnerActor->GetActorRotation().Vector() * 150)+FVector(0.0f,0.0f,800.0f);
+		FVector v = ActorInfo->OwnerActor->GetActorLocation() + (ActorInfo->OwnerActor->GetActorRotation().Vector() * 200)+FVector(0.0f,0.0f,800.0f);
 		FRotator r;
 		//UCameraComponent* Camera = ActorInfo->OwnerActor->GetComponentByClass<UCameraComponent>();
 		//if (Camera) {

@@ -17,12 +17,12 @@ public class ProjectJMJEditorTarget : TargetRules
 		{
             //bUseGameplayDebuggerCore = true;
             //bAdaptiveUnityDisablesOptimizations = true;
-            bUseInlining = false;
-            bUseUnityBuild = false;
-            bUsePCHFiles = false;
-            BuildEnvironment = TargetBuildEnvironment.Unique;
+            //bUseInlining = false;
+            //bUseUnityBuild = false;
+            //bUsePCHFiles = false;
+            //BuildEnvironment = TargetBuildEnvironment.Unique;
             //OptimizeCode = CodeOptimization.Never; // 禁用优化
-            AdditionalCompilerArguments = "/Od"; // 禁用优化
+            //AdditionalCompilerArguments = "/Od"; // 禁用优化
         }
 
     }

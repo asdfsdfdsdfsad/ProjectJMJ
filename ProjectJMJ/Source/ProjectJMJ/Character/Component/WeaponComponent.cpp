@@ -23,7 +23,7 @@ void UWeaponComponent::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AA
 			TArray<AActor*> ActorsToIgnore;
 			ActorsToIgnore.Add(GetOwner());
 			FHitResult HitResult;
-			UKismetSystemLibrary::SphereTraceSingle(GetWorld(), OverlappedComponent->GetComponentLocation(), SweepResult.HitObjectHandle.GetLocation(), 5.0f, ETraceTypeQuery::TraceTypeQuery1, false, ActorsToIgnore, EDrawDebugTrace::ForDuration, HitResult, true);
+			UKismetSystemLibrary::SphereTraceSingle(GetWorld(), OverlappedComponent->GetComponentLocation(), SweepResult.HitObjectHandle.GetLocation(), 5.0f, ETraceTypeQuery::TraceTypeQuery1, false, ActorsToIgnore, EDrawDebugTrace::None, HitResult, true);
 
 			if (HitResult.bBlockingHit) {
 				//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Attack"));
@@ -39,7 +39,7 @@ void UWeaponComponent::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AA
 					LatentInfo.CallbackTarget = this;
 					UAttributeComponent* AttriComp = HitResult.GetActor()->GetComponentByClass<UAttributeComponent>();
 					if (AttriComp) {
-						AttriComp->ApplyDamages(OtherActor, nullptr, Attack, 0.0f,false,HitResult.Location);
+						AttriComp->ApplyDamages(OtherActor, nullptr, Attack, -20.0f,false,HitResult.Location);
 						if (AttriComp->GetHealth()>0)
 						{
 							UKismetSystemLibrary::Delay(GetWorld(), 0.1f, LatentInfo);

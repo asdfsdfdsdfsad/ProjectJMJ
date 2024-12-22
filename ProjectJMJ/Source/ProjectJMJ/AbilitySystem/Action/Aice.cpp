@@ -35,11 +35,12 @@ void AAice::TriggerDamage()
 		FVector v2 = StartV+(GetActorRotation().Vector()*200);
 		TArray<AActor*> ActorsToIgnore;
 		FHitResult HitResult;
-		UKismetSystemLibrary::BoxTraceSingleByProfile(GetWorld(), StartV, v2, FVector(50.0f, 50.0f, 50.0f), FRotator(0.0f, 0.0f,0.0f),FName(""),false, ActorsToIgnore,EDrawDebugTrace::ForDuration,HitResult,true,FLinearColor::Red,FLinearColor::Green,2.0f);
+		UKismetSystemLibrary::BoxTraceSingleByProfile(GetWorld(), StartV, v2, FVector(50.0f, 50.0f, 50.0f), FRotator(0.0f, 0.0f,0.0f),FName(""),false, ActorsToIgnore,EDrawDebugTrace::None,HitResult,true,FLinearColor::Red,FLinearColor::Green,2.0f);
 		StartV = v2;
 		if (HitResult.bBlockingHit) 
 		{
 			UAttributeComponent * AttrComp=HitResult.GetActor()->GetComponentByClass<UAttributeComponent>();
+			if(AttrComp)
 			AttrComp->ApplyDamages(HitResult.GetActor(),AttrComp,-20,1.0f,true,FVector(0.0f,0.0f,50.0f));
 		}
 		if (GEngine) {

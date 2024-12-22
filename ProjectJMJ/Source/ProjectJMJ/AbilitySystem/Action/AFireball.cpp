@@ -39,7 +39,7 @@ void AAFireball::BoxBeginStartOverride(UPrimitiveComponent* OverlappedComponent,
 		UAttributeComponent* AttrComp = SweepResult.GetActor()->GetComponentByClass<UAttributeComponent>();
 		if (AttrComp) {
 			AttrComp->ApplyDamages(SweepResult.GetActor(), AttrComp, -10, 0,true,GetActorRotation().Vector());
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Fire"));
+			//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Fire"));
 		}
 	}
 }

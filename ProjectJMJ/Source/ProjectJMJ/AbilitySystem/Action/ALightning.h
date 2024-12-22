@@ -7,6 +7,7 @@
 #include "ALightning.generated.h"
 
 class UNiagaraComponent;
+class UBoxComponent;
 UCLASS()
 class PROJECTJMJ_API AALightning : public AActor
 {
@@ -26,6 +27,13 @@ public:
 
 	void Active();
 
+	UFUNCTION()
+	void BoxBeginStartOverride(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	TObjectPtr<UNiagaraComponent> Niagara;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	TObjectPtr<UBoxComponent> BoxComponent;
 };
